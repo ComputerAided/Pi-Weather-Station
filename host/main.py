@@ -15,7 +15,7 @@ def hello():
     error = None
     if request.method == 'PUT':
 
-        data = json.loads(request.body.raw)
+        data = request.get_json
 
         templateData['temp'] = data['temp']
         templateData['humd'] = data['humd']
